@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 	# DELETE /users/:user_id
 	def destroy
 		user = User.find(params[:id])
-		user.destroy
+		user.destroy!
 
 		head :no_content
 	end

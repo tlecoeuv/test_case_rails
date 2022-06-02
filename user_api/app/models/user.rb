@@ -19,5 +19,5 @@ class User < ApplicationRecord
 	validates :email, presence: true, uniqueness: true, email: true
 	validates :first_name, presence: true, length: {minimum: 3}
 	validates :last_name, presence: true, length: {minimum: 3}
-	validates :phone, phone: true
+	validates :phone, allow_blank: true, phone: true
 end
